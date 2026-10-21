@@ -1,0 +1,15 @@
+# File tam sinh
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# File noi bo - TUYET DOI khong commit
+LEADS.md
+FINAL_CHECK.md
+MASTER_EXECUTION_BLUEPRINT_v1.0.md
+docs/BRAND_ARCHITECTURE.md
+docs/KY_NGUYEN_AI_VIET_NAM.md
+_tools/
+_backup_*/
+_strategic_reserve/

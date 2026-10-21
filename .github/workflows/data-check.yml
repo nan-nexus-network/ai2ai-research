@@ -1,0 +1,26 @@
+name: Kiem tra du lieu (Data Check)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  data-check:
+    name: Kiem tra bo du lieu + quet PII
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ma nguon
+        uses: actions/checkout@v4
+
+      - name: Thiet lap moi truong Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Kiem tra du lieu + quet PII
+        run: python scripts/validate_dataset.py

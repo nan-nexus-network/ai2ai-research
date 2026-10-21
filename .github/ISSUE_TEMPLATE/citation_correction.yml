@@ -1,0 +1,42 @@
+name: Chỉ ra lỗi trích dẫn hoặc dữ liệu
+description: Bạn tìm thấy một trích dẫn sai, một số liệu không khớp, hoặc một văn bản trong bộ dữ liệu bị ghi chưa chính xác.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn bạn đã đọc kỹ. Mỗi lỗi bạn chỉ ra đều được sửa và ghi vào
+        [CHANGELOG.md](../blob/main/CHANGELOG.md). Nếu bạn mở issue ở đây mà
+        thấy nội dung liên quan đến **mã nguồn**, hãy mở issue ở kho `ai2ai-core`.
+  - type: input
+    id: location
+    attributes:
+      label: Vị trí lỗi
+      description: Chương, mục, dòng, hoặc `id` của dòng dữ liệu trong STANDARDS/
+      placeholder: "PAPERS/WHITEPAPER_VN_AI_BRIDGE.md, Phụ lục A.1.2" or "STANDARDS/standards.json, id=GB-Z-185-2026"
+    validations:
+      required: true
+  - type: textarea
+    id: quoted
+    attributes:
+      label: Trích nguyên văn đang bị sai
+      description: Nguyên văn như đang có trong tài liệu.
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: Nội dung đúng, kèm nguồn
+      description: |
+        Nếu có văn bản gốc (link chính thức, số hiệu, ngày ban hành), hãy ghi kèm.
+        Nếu bạn không có nguồn chính thức, hãy nói rõ là suy luận và mức độ chắc chắn.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Mức độ ảnh hưởng
+      description: Lỗi này có làm thay đổi kết luận nào trong tài liệu không?
+    validations:
+      required: false

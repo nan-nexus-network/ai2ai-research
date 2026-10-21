@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Phản biện về tài liệu (kho thảo luận)
+    url: https://github.com/nan-nexus-network/ai2ai-research/discussions
+    about: Nơi trao đổi mở về luận điểm, không phải báo lỗi kỹ thuật.
+  - name: Câu hỏi về mã nguồn
+    url: https://github.com/nan-nexus-network/ai2ai-core/issues/new/choose
+    about: Chuyển sang kho mã nguồn cho mọi câu hỏi về triển khai.
+  - name: Liên hệ ngoài GitHub
+    url: mailto:nan_ai2ai@proton.me
+    about: Câu hỏi về tài liệu, hợp tác, hoặc trích dẫn.
