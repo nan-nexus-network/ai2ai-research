@@ -46,7 +46,7 @@ for k, v in sorted(by_domain.items()):
 
 | Lĩnh vực | Số | Nội dung chính |
 |:---|--:|:---|
-| `interoperability` | 5 | MCP, A2A, GB/Z 185-2026, T/ZGCMCA 024-2025, cộng đồng AIP |
+| `interoperability` | 5 | MCP, A2A, GB/Z 185.1–185.7-2026, T/ZGCMCA 024—2025, cộng đồng ANP |
 | `governance` | 3 | EU AI Act, quy định AI tạo sinh Trung Quốc, Luật An ninh mạng sửa đổi |
 | `policy` | 5 | Nghị quyết 57-NQ/TW và các chương trình hành động, quyết định 1528 & 1671/QĐ-TTg |
 | `cooperation` | 4 | Tuyên bố chung 4/2026, hai bản ghi nhớ, Trung tâm Hợp tác AI Việt–Trung |
