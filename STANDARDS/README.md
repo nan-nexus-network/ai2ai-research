@@ -39,7 +39,7 @@ for k, v in sorted(by_domain.items()):
 | `domain` | `interoperability` · `governance` · `policy` · `cooperation` · `trade` · `data` |
 | `status` | Trạng thái theo mô tả của nguồn |
 | `scope` | Phạm vi văn bản phủ, theo cách diễn đạt của nguồn |
-| `relevance_to_nan` | Vì sao văn bản này quan trọng với một tầng cầu nối trung lập xuyên hệ sinh thái |
+| `relevance_to_nan` | Vì sao văn bản này quan trọng với một lớp bằng chứng kỹ thuật trung lập xuyên hệ sinh thái |
 | `source_ref` | Vị trí trong whitepaper mà dòng này đến từ đó |
 
 ## Phân bố theo lĩnh vực

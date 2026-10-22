@@ -6,7 +6,7 @@
 
 ## Dự án là gì
 
-**NAN AI2AI-SI2SI** là một **khung tham chiếu mở** (Open Reference Framework) đang ở giai đoạn **PoC**, nhằm thử nghiệm giả thuyết: một tầng chuyển đổi **trung lập** có thể kết nối các hệ sinh thái AI đang phân mảnh, và trong đó Việt Nam có thể thử đóng vai trò trung lập.
+**NAN AI2AI-SI2SI** là một **khung tham chiếu mở** (Open Reference Framework) đang ở giai đoạn **PoC**, nhằm thử nghiệm giả thuyết: một lớp bằng chứng kỹ thuật **trung lập** có thể kết nối các hệ sinh thái AI đang phân mảnh, và trong đó Việt Nam có thể thử đóng vai trò trung lập.
 
 ## Câu hỏi
 
