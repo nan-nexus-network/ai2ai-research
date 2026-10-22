@@ -9,7 +9,7 @@ abstract: >-
   questions for the community plus a published stopping criterion. Accompanied
   by a machine-readable dataset of 22 international AI interoperability and
   AI-governance instruments.
-type: software
+type: dataset
 authors:
   - name: "Người khởi xướng sáng kiến NAN AI2AI-SI2SI"
 repository-code: "https://github.com/nan-nexus-network/ai2ai-research"
@@ -24,4 +24,4 @@ keywords:
   - vietnam
   - open-source
   - open-research
-date-released: "2026-10-21"
+date-released: "2026-10-22"

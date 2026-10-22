@@ -5,6 +5,17 @@ Chay duoc o moi moi truong GitHub Actions (chi Python 3.8+ stdlib).
 Exit 0 = PASS, exit 1 = FAIL."""
 import csv, io, json, os, re, sys, unicodedata
 
+# Console Windows mac dinh dung cp1252: in thong bao loi co ky tu phi-ASCII
+# (vi du tu khoa tieng Viet trong bang kiem tra source_ref) se nem
+# UnicodeEncodeError va lam bo kiem dinh crash thay vi bao loi. Chuan hoa
+# stdout sang UTF- voi backslashreplace de loi hien thi duoc, khong crash.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        try:
+            _stream.reconfigure(encoding="utf-8", errors="backslashreplace")
+        except (OSError, ValueError):
+            pass
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_PATH = os.path.join(ROOT, "STANDARDS", "standards.json")
 CSV_PATH = os.path.join(ROOT, "STANDARDS", "standards.csv")
@@ -132,7 +143,68 @@ def main():
         else:
             print("  CSV %d dong, id khop va dung thu tu" % len(csv_rows))
 
-    print("=== [3] Quet PII / duong dan may / secret trong toan repo ===")
+    print("=== [3] Doi chieu source_ref voi danh muc tham khao cua whitepaper ===")
+    # Muc tieu: dataset chi dung khi moi 'source_ref' tro DUNG ve danh muc
+    # tham khao trong PAPERS/WHITEPAPER_VN_AI_BRIDGE.md. Khi danh muc doi
+    # (them/bot muc), so thu tu doi -> day la lo loi rat de xay ra va rat
+    # de bi doc gia nhin sai. Kiem tra nay chan loi do lai.
+    paper_path = os.path.join(ROOT, "PAPERS", "WHITEPAPER_VN_AI_BRIDGE.md")
+    # Tu khoa phan biet: CHI dung ky tu ASCII. Neu dung tieng Viet/Han trong
+    # bang nay, mot escape sai se bien thanh khoa KHONG khop - va loi se im
+    # lang, vi validator se bao "khong chua" ma khong bao gi la sai.
+    expected = {
+        "VN-NQ-57-2024": (1, "57-NQ/TW"),
+        "VN-NQ-03-2025": (2, "03/NQ-CP"),
+        "VN-NQ-71-2025": (3, "71/NQ-CP"),
+        "HANOI-DIGITAL-DECL": (4, "Hanoi Digital Declaration"),
+        "VN-QD-1528-2026": (5, "1528/"),
+        "VN-QD-1671-2026": (6, "1671/"),
+        "CN-AI-INTERIM-2023": (7, "15/08/2023"),
+        "GB-Z-185-2026": (8, "GB/Z 185.1"),
+        "T-ZGCMCA-024-2025": (9, "T/ZGCMCA 024"),
+        "CN-CYBERSEC-AMEND-2026": (10, "01/01/2026"),
+        "VN-CN-TUYEN-BO-2026": (11, "17/04/2026"),
+        "VN-CN-MOU-IT-2023": (12, "12/2023"),
+        "VN-CN-MOU-AI-2025": (13, "NDRC"),
+        "ACFTA-3-0": (14, "ACFTA 3.0"),
+        "DEFA": (15, "DEFA"),
+        "ECONOMY-SEA-2024": (16, "e-Conomy SEA 2024"),
+        "NIC-GOOGLE-2024": (17, "Economic Impact Report"),
+    }
+    try:
+        with io.open(paper_path, encoding="utf-8") as fh:
+            paper = fh.read()
+    except Exception as exc:
+        paper = ""
+        errors += fail("khong doc duoc whitepaper: %s" % exc)
+    entries = {}
+    if paper:
+        start = paper.find("**Danh m\u1ee5c v\u0103n b\u1ea3n ch\u00ednh s\u00e1ch tham chi\u1ebfu:**")
+        end = paper.find("**B\u1ea3ng x\u00e1c minh")
+        block = paper[start:end] if start >= 0 and end > start else ""
+        for m in re.finditer(r"(?m)^  (\d+)\. (.+)$", block):
+            entries[int(m.group(1))] = m.group(2)
+    if entries:
+        for rid, (num, keyword) in expected.items():
+            row = next((x for x in rows if x.get("id") == rid), None)
+            if row is None:
+                errors += fail("dong %s khong co trong dataset" % rid); continue
+            m = re.search(r"Tham khao (\d+)", row.get("source_ref", ""), re.I)
+            if not m:
+                errors += fail("dong %s khong co source_ref 'Tham khao N'" % rid); continue
+            if int(m.group(1)) != num:
+                errors += fail("dong %s tro tham khao %s, ky vong %d (danh muc tham khao da doi thu tu?)"
+                               % (rid, m.group(1), num)); continue
+            entry = entries.get(num, "")
+            if keyword not in entry:
+                errors += fail("muc tham khao %d khong chua '%s' (muc %d la: %r)"
+                               % (num, keyword, num, entry[:60])); continue
+        print("  %d/%d muc tham khao doi chieu dung" % (len(expected), len(expected)))
+        print("  danh muc tham khao trong whitepaper: %d muc" % len(entries))
+    else:
+        print("  WARNING: khong tim thay danh muc tham khao trong whitepaper - bo qua")
+
+    print("=== [4] Quet PII / duong dan may / secret trong toan repo ===")
     scanned = 0
     for dp, dn, fns in os.walk(ROOT):
         dn[:] = [d for d in dn if d not in (".git", "__pycache__")]

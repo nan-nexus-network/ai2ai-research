@@ -42,4 +42,4 @@ python scripts/validate_dataset.py --denylist /path/rieng/denylist.txt
 File denylist chỉ ghi mỗi dòng một chuỗi cấm. Cơ chế này giữ cho CI công khai
 sạch trong khi vẫn cho phép kiểm tra sâu trước mỗi lần phát hành.
 
-Chi tiết phương pháp: [`ai2ai-core/PROCESS.md`](https://github.com/nan-nexus-network/ai2ai-core/blob/main/PROCESS.md).
+Chi tiết phương pháp: [`ai2ai-core/PROCESS.md`](https://github.com/nan-nexus-network/ai2ai-core/blob/main/BUILD_NOTES.md).

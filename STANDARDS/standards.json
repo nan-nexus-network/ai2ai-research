@@ -57,7 +57,7 @@
       "status": "cong-boc-2026-05-22",
       "scope": "7 van ban ky thuat chi dan chuan hoa quoc gia ve ket noi tac tu AI (Cong bo 2026 so 22): tong quan kien truc, ma dinh danh, quan ly dinh danh, mo ta tac tu, kham pha tac tu, tuong tac tac tu, goi cong cu tac tu",
       "relevance_to_nan": "Chuan quoc gia co hau qua tuong thich; can mot tang noi nhieu chuan",
-      "source_ref": "Phu luc A.1.2; tham khao 8"
+      "source_ref": "Phu luc A.1.2; Tham khao 8"
     },
     {
       "id": "T-ZGCMCA-024-2025",
@@ -68,7 +68,7 @@
       "year": 2025,
       "domain": "interoperability",
       "status": "ban-hanh-2026-02-07",
-      "scope": "《人工智能智能体互操作性接口规范》 - Tieu chuan nhom cua CMCA, hieu luc 07/02/2026",
+      "scope": "\u300a\u4eba\u5de5\u667a\u80fd\u667a\u80fd\u4f53\u4e92\u64cd\u4f5c\u6027\u63a5\u53e3\u89c4\u8303\u300b - Tieu chuan nhom cua CMCA, hieu luc 07/02/2026",
       "relevance_to_nan": "Lien quan giao dien tac tu, khong phai lien van",
       "source_ref": "Tham khao 9"
     },
@@ -109,7 +109,7 @@
       "status": "hieu-luc-2023-08-15",
       "scope": "Quan ly dich vu AI tao sinh",
       "relevance_to_nan": "Tang quan tri dich vu - tang dau trong ba tang quan tri AI cua Trung Quoc",
-      "source_ref": "Tham khao 6; phu luc A.1.1"
+      "source_ref": "Tham khao 7; phu luc A.1.1"
     },
     {
       "id": "CN-CYBERSEC-AMEND-2026",
@@ -122,7 +122,7 @@
       "status": "hieu-luc-2026-01-01",
       "scope": "Bo sung dieu khoan quan tri AI vao khung an ninh mang quoc gia",
       "relevance_to_nan": "Tang quan tri quoc gia",
-      "source_ref": "Tham khao 9; phu luc A.1.3"
+      "source_ref": "Tham khao 10; phu luc A.1.3"
     },
     {
       "id": "HANOI-DIGITAL-DECL",
@@ -146,7 +146,7 @@
       "year": 2024,
       "domain": "policy",
       "status": "hieu-luc",
-      "scope": "Doi pha phat triển khoa hoc, cong nghe, doi moi sang tao va chuyen doi so quoc gia",
+      "scope": "Doi pha phat tri\u1ec3n khoa hoc, cong nghe, doi moi sang tao va chuyen doi so quoc gia",
       "relevance_to_nan": "Dinh huong chinh sach cap cao nhat ve KH&CN",
       "source_ref": "Tham khao 1"
     },
@@ -200,7 +200,7 @@
       "status": "hieu-luc",
       "scope": "Chien luoc quoc gia ve tri tue nhan tao",
       "relevance_to_nan": "Dinh huong cap cao ve AI, nen tang cho dinh huong 'Connected Intelligence'",
-      "source_ref": "Tham khao 5"
+      "source_ref": "Tham khao 6"
     },
     {
       "id": "VN-CN-TUYEN-BO-2026",
@@ -213,7 +213,7 @@
       "status": "da-ky",
       "scope": "Tiep tuc lam sau sac quan he doi tac hop tac chien luoc toan dien",
       "relevance_to_nan": "Cam ket 'kham pha co che hop tac ma nguon mo' - mo duong cho hop tac ma nguon",
-      "source_ref": "Tham khao 10; phu luc A.2.3"
+      "source_ref": "Tham khao 11; phu luc A.2.3"
     },
     {
       "id": "VN-CN-MOU-IT-2023",
@@ -226,20 +226,20 @@
       "status": "da-ky",
       "scope": "Hop tac thu vien so va chuyen doi so",
       "relevance_to_nan": "Nen tang hop tac song phuong ve co so du lieu va ha tang",
-      "source_ref": "Tham khao 11; phu luc A.2.1"
+      "source_ref": "Tham khao 12; phu luc A.2.1"
     },
     {
       "id": "VN-CN-MOU-AI-2025",
-      "name": "Ban ghi nho hop tac phat trien va quan tri AI Viet Nam - Trung Quoc (2025)",
-      "name_local": "",
-      "issuer": "Viet Nam va Trung Quoc",
+      "name": "\u300a\u5173\u4e8e\u6df1\u5316\u4eba\u5de5\u667a\u80fd\u5408\u4f5c\u7684\u8c26\u89e3\u5907\u5fd8\u5f55\u300b (NDRC - Bo KH&CN)",
+      "name_local": "\u5173\u4e8e\u6df1\u5316\u4eba\u5de5\u667a\u80fd\u5408\u4f5c\u7684\u8c26\u89e3\u5907\u5fd8\u5f55",
+      "issuer": "National Development and Reform Commission (TQ) va Bo KH&CN Viet Nam",
       "jurisdiction": "song-phuong",
       "year": 2025,
       "domain": "cooperation",
-      "status": "da-ky",
-      "scope": "Hop tac phat trien va quan tri AI",
+      "status": "da-ky-2025-04",
+      "scope": "\u5173\u4e8e\u6df1\u5316\u4eba\u5de5\u667a\u80fd\u5408\u4f5c\u7684\u8c26\u89e3\u5907\u5fd8\u5f55 - tang cuong hop tac phat trien va quan tri AI",
       "relevance_to_nan": "Tien deu cho mot tang giao thuc co the chuan hoa",
-      "source_ref": "Tham khao 12; phu luc A.2.2"
+      "source_ref": "Tham khao 13; phu luc A.2.2"
     },
     {
       "id": "VN-CN-AI-CENTER-2025",
@@ -265,7 +265,7 @@
       "status": "hieu-luc-2025-10-28",
       "scope": "Bao gom noi dung kinh te so",
       "relevance_to_nan": "Khung thuong mai song phuong co noi dung kinh te so",
-      "source_ref": "Tham khao 13; phu luc A.3.2"
+      "source_ref": "Tham khao 14; phu luc A.3.2"
     },
     {
       "id": "DEFA",
@@ -278,7 +278,7 @@
       "status": "dam-phan-xong-cho-ky",
       "scope": "Hiep dinh khung kinh te so ASEAN",
       "relevance_to_nan": "Khung phap ly kinh te so cap khu vuc dang cho doi thoai lien van AI",
-      "source_ref": "Tham khao 14; phu luc A.3.1"
+      "source_ref": "Tham khao 15; phu luc A.3.1"
     },
     {
       "id": "RCEP",
@@ -304,7 +304,7 @@
       "status": "bao-cao-2024-11",
       "scope": "Nen kinh te so ASEAN: 263 ty USD GMV (+15%), 89 ty USD doanh thu (+14%), 11 ty USD loi nhuan (+24%)",
       "relevance_to_nan": "Nguon so lieu ve quy mo nen kinh te so khu vuc",
-      "source_ref": "Tham khao 15"
+      "source_ref": "Tham khao 16"
     },
     {
       "id": "NIC-GOOGLE-2024",
@@ -317,7 +317,7 @@
       "status": "bao-cao-2024-11-14",
       "scope": "Uoc tinh doanh nghiep Viet Nam thu them 1.890 nghiin ty dong (79,3 ty USD) loi ich kinh te tu AI nam 2030, tuong duong gan 12% GDP",
       "relevance_to_nan": "Nguon so lieu ve tac dong cua AI voi kinh te Viet Nam",
-      "source_ref": "Tham khao 16"
+      "source_ref": "Tham khao 17"
     }
   ]
 }

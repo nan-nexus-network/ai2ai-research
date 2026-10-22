@@ -29,11 +29,11 @@ Tài liệu này kết thúc bằng **mười hai câu hỏi mở** dành cho c�
 |:---|:---|:---|
 | [`PAPERS/WHITEPAPER_VN_AI_BRIDGE.md`](PAPERS/WHITEPAPER_VN_AI_BRIDGE.md) | Tài liệu thảo luận đầy đủ (7 chương + phụ lục đối chiếu chính sách quốc tế) | Người đọc có thời gian |
 | [`PAPERS/ABSTRACT_EN.md`](PAPERS/ABSTRACT_EN.md) | Tóm tắt tiếng Anh + 摘要中文, một trang | Báo chí quốc tế, đối tác tiếng Trung |
-| [`STANDARDS/standards.csv`](STANDARDS/standards.csv) · [`.json`](STANDARDS/standards.json) | **Bộ dữ liệu so sánh 22 văn bản tiêu chuẩn/chính sách**, máy đọc được | Phân tích dữ liệu, báo cáo, công cụ |
+| [`STANDARDS/standards.csv`](STANDARDS/standards.csv) · [`.json`](STANDARDS/standards.json) | **Bộ dữ liệu so sánh 23 văn bản tiêu chuẩn/chính sách**, máy đọc được | Phân tích dữ liệu, báo cáo, công cụ |
 | [`MEDIA/ONE_PAGE_SUMMARY.md`](MEDIA/ONE_PAGE_SUMMARY.md) | Tóm tắt một trang, sẵn sàng dùng | Báo chí, thư ngỏ |
 | [`CHANGELOG.md`](CHANGELOG.md) | Lịch sử phiên bản tài liệu | Theo dõi |
 
-**Bộ dữ liệu `STANDARDS/` là phần đặc thù.** Nó gom 22 văn bản (tiêu chuẩn kết nối tác tử, quy định quản trị AI, hiệp định thương mại, tuyên bố chính sách) vào một bảng có trường máy đọc được: ai ban hành, thẩm quyền nào, năm nào, lĩnh vực, trạng thái hiệu lực, và **vì sao nó liên quan đến khoảng trống liên vận**. Mỗi dòng đều có trường `source_ref` trỏ về mục tham khảo trong whitepaper, nên **mọi khẳng định đều truy vết được**.
+**Bộ dữ liệu `STANDARDS/` là phần đặc thù.** Nó gom 23 văn bản (tiêu chuẩn kết nối tác tử, quy định quản trị AI, hiệp định thương mại, tuyên bố chính sách) vào một bảng có trường máy đọc được: ai ban hành, thẩm quyền nào, năm nào, lĩnh vực, trạng thái hiệu lực, và **vì sao nó liên quan đến khoảng trống liên vận**. Mỗi dòng đều có trường `source_ref` trỏ về mục tham khảo trong whitepaper, nên **mọi khẳng định đều truy vết được**.
 
 ## 4. Cách trích dẫn
 
@@ -65,7 +65,7 @@ Cũng có [`CITATION.cff`](CITATION.cff) cho các công cụ trích dẫn tự �
 
 ## English summary
 
-This repository holds the **open discussion paper** and a **machine-readable dataset of 22 international AI interoperability and AI-governance instruments**, for journalists, government agencies, and policy researchers.
+This repository holds the **open discussion paper** and a **machine-readable dataset of 23 international AI interoperability and AI-governance instruments**, for journalists, government agencies, and policy researchers.
 
 **The question:** if a country does not compete to build billion-dollar foundation models, what role could it play that is genuinely valuable and sustainable in the global AI value chain? The proposed answer to test: a **neutral reference bridge layer** between fragmented AI ecosystems.
 
