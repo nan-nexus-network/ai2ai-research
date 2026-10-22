@@ -71,7 +71,7 @@ This repository holds the **open discussion paper** and a **machine-readable dat
 
 **Three findings.** (1) The gap is real and acknowledged in official documents themselves: MCP and A2A are not sufficient on their own, and three specific barriers block cross-ecosystem agent transactions. (2) Vietnam has four concrete advantages, but they are not independent. (3) This is a proposal for discussion, not a manifesto: the paper ends with twelve open questions and a published stopping criterion.
 
-**Repository layout:** `PAPERS/` full paper (Vietnamese) and one-page abstract (English, Chinese); `STANDARDS/` the 22-instrument dataset in CSV and JSON, every row traceable to a numbered source; `MEDIA/` one-page summary; `CHANGELOG.md` version history.
+**Repository layout:** `PAPERS/` full paper (Vietnamese) and one-page abstract (English, Chinese); `STANDARDS/` the 23-instrument dataset in CSV and JSON, every row traceable to a numbered source; `MEDIA/` one-page summary; `CHANGELOG.md` version history.
 
 **Commitments:** no funding sought, no token issued, no course sold; this does not represent the Vietnamese AI community; this is a proof of concept, and the paper is an argument to be challenged, not a verified conclusion; every legal citation carries a date and document number, and if you find an error, please open an issue.
 

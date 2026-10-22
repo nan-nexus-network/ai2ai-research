@@ -204,7 +204,37 @@ def main():
     else:
         print("  WARNING: khong tim thay danh muc tham khao trong whitepaper - bo qua")
 
-    print("=== [4] Quet PII / duong dan may / secret trong toan repo ===")
+    print("=== [4] So lieu 'so van ban' trong van xu phai khop voi bo du lieu ===")
+    # Ly do: so van ban duoc ghi tay trong README/CHANGELOG/CITATION. Khi bo
+    # du lieu doi (them/bot mot van ban), cac con so do se TROI - va nguoi doc
+    # se thay mot ban tieng Viet noi 23, mot ban tieng Anh noi 22. Dieu do lam
+    # mat uy tin ngay lap tuc, dac biet voi co quan chinh sach va bao chi.
+    # Kiem tra nay bien "so lieu hardcode" thanh thu muc bat buoc.
+    COUNT_FILES = ("README.md", "CHANGELOG.md", "CITATION.cff")
+    COUNT_PATTERNS = [
+        r"(\d+)-instrument dataset",
+        r"dataset of (\d+) international",
+        r"(\d+) văn bản",
+    ]
+    checked = 0
+    for rel in COUNT_FILES:
+        fp = os.path.join(ROOT, rel)
+        if not os.path.exists(fp):
+            continue
+        with io.open(fp, encoding="utf-8") as fh:
+            content = fh.read()
+        for pat in COUNT_PATTERNS:
+            for m in re.finditer(pat, content):
+                n = int(m.group(1))
+                checked += 1
+                if n != len(rows):
+                    line_no = content[:m.start()].count("\n") + 1
+                    errors += fail(
+                        "%s dong %d ghi so van ban la %d, nhung bo du lieu co %d dong"
+                        % (rel, line_no, n, len(rows)))
+    print("  da doi chieu %d cho so van ban voi %d dong bo du lieu" % (checked, len(rows)))
+
+    print("=== [5] Quet PII / duong dan may / secret trong toan repo ===")
     scanned = 0
     for dp, dn, fns in os.walk(ROOT):
         dn[:] = [d for d in dn if d not in (".git", "__pycache__")]
