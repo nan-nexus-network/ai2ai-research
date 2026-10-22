@@ -10,7 +10,7 @@
     "name": "Name of the instrument in its original language or English",
     "name_local": "Original-language name, when different from 'name'",
     "issuer": "Body that issued or adopted the instrument",
-    "jurisdiction": "quoc-te | Trung Quoc | EU | ASEAN | Viet Nam | song-phuong | khuc-vuc",
+    "jurisdiction": "quoc-te | Trung Quoc | EU | ASEAN | Viet Nam | song-phuong | khu-vuc",
     "year": "Year of issuance, or null when the source does not state one",
     "domain": "interoperability | governance | policy | cooperation | trade | data",
     "status": "Status as described in the source",
@@ -238,7 +238,7 @@
       "domain": "cooperation",
       "status": "da-ky-2025-04",
       "scope": "\u300a\u5173\u4e8e\u6df1\u5316\u4eba\u5de5\u667a\u80fd\u5408\u4f5c\u7684\u8c05\u89e3\u5907\u5fd8\u5f55\u300b - tang cuong hop tac phat trien va quan tri AI",
-      "relevance_to_nan": "Tien deu cho mot tang giao thuc co the chuan hoa",
+      "relevance_to_nan": "Tien de cho mot tang giao thuc co the chuan hoa",
       "source_ref": "Tham khao 13; Phu luc A.2.2"
     },
     {
