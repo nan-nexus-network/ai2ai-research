@@ -14,7 +14,7 @@
 
 **Finding 3: this is a proposal, not a manifesto.** The paper closes with **twelve open questions** for the community and domain experts, and publishes a **stopping criterion**: if in twelve months this proposal is neither adopted by the community nor shown to have practical value, we will publicly end the project rather than waste social effort.
 
-**What is not claimed.** No standardised protocol is proposed. No production system exists. The accompanying proof of concept in [`ai2ai-core`](https://github.com/nan-nexus-network/ai2ai-core) runs a local, single-process simulation with a static string blocklist that is explicitly *not* a security measure, and a SHA-256 receipt that establishes data integrity but **not** identity or non-repudiation. Those gaps are tracked as open issues, published in advance.
+**What is not claimed.** No standardised protocol is proposed. No production system exists. The accompanying proof of concept in [`ai2ai-core`](https://github.com/nan-nexus-network/ai2ai-core) runs a local, single-process simulation with a static string blocklist that is explicitly *not* a security measure, and a SHA-256 receipt that establishes data integrity but **not** identity or non-repudiation. *Update (v0.2):* the `ai2ai-core` repository now also ships a `nan-receipt/v1` receipt **signed by the executing agent with Ed25519** (validated against the official RFC 8032 test vectors) plus a deduplication mechanism that prevents a task from executing twice, sequentially or concurrently. What is still missing is unchanged and equally important: the trust anchor is **TOFU** (pin the key on first use), there is still **no** non-repudiation, **no** cross-process replay protection and **no** public transparency log. Those gaps remain open issues, published in advance.
 
 **Companion dataset.** [`STANDARDS/`](../STANDARDS/) collects 23 international AI interoperability, AI-governance, trade and cooperation instruments in a machine-readable form, every row traceable to a numbered source. Use it to check, extend, or contradict this analysis.
 
@@ -30,6 +30,6 @@
 
 **结论三：这是提议，不是宣言。** 文档以**十二个开放问题**结尾，并公布**停止条件**：若 12 个月内该提议既未被社区接受、也未证明实际价值，我们将公开结束项目，而不是浪费社会资源。
 
-**本文不主张什么。** 不提出标准化协议，不存在生产系统。配套 PoC 见 [`ai2ai-core`](https://github.com/nan-nexus-network/ai2ai-core)：仅本地单进程模拟，静态字符串黑名单**明确不是**安全措施，SHA-256 回执只保证数据完整性，**不**保证身份与不可抵赖。这些缺口已作为公开 issue 提前列出。
+**本文不主张什么。** 不提出标准化协议，不存在生产系统。配套 PoC 见 [`ai2ai-core`](https://github.com/nan-nexus-network/ai2ai-core)：仅本地单进程模拟，静态字符串黑名单**明确不是**安全措施，SHA-256 回执只保证数据完整性，**不**保证身份与不可抵赖。*更新（v0.2）：* `ai2ai-core` 仓库现另提供由**执行方本人以 Ed25519 签名**的 `nan-receipt/v1` 回执（已用 RFC 8032 官方测试向量验证），以及可防止任务被重复执行的幂等机制（顺序与并发均可）。**仍然缺失**的部分同样重要：信任锚目前仍是 TOFU（首次使用时固定公钥），**尚无**防抵赖能力、**尚无**跨进程防重放、**尚无**公开透明日志。这些缺口已作为公开 issue 提前列出。
 
 **配套数据集。** [`STANDARDS/`](../STANDARDS/) 以机器可读形式收录 23 项国际 AI 互操作、AI 治理、贸易与合作文书，每一行都可追溯到具体来源编号。欢迎据此核查、补充或反驳本文分析。

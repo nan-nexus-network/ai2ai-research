@@ -24,7 +24,7 @@ REQUIRED = ["id","name","issuer","jurisdiction","domain","status","scope",
             "relevance_to_nan","source_ref"]
 ALLOWED_DOMAIN = {"interoperability","governance","policy","cooperation",
                   "trade","data","digital-cooperation"}
-ALLOWED_JURIS = {"quoc-te","Trung Quoc","EU","ASEAN","Viet Nam","song-phuong","khuc-vuc"}
+ALLOWED_JURIS = {"quoc-te","Trung Quoc","EU","ASEAN","Viet Nam","song-phuong","khu-vuc"}
 
 # Duong dan may + dinh danh ca nhan: KHONG duoc xuat hien trong tai lieu cong khai.
 #
@@ -169,7 +169,7 @@ def main():
         "ACFTA-3-0": (14, "ACFTA 3.0"),
         "DEFA": (15, "DEFA"),
         "ECONOMY-SEA-2024": (16, "e-Conomy SEA 2024"),
-        "NIC-GOOGLE-2024": (17, "Economic Impact Report"),
+        "ACCESS-GOOGLE-2024": (17, "Economic Impact Report"),
     }
     try:
         with io.open(paper_path, encoding="utf-8") as fh:
@@ -214,6 +214,10 @@ def main():
     COUNT_PATTERNS = [
         r"(\d+)-instrument dataset",
         r"dataset of (\d+) international",
+        # "N văn bản" chi la so VAN BAN cua BO DU LIEU khi khong
+        # di sau la tu chi dinh TAP CON. Vi du "7 văn bản ky thuat chi dan"
+        # (7 phan cua GB/Z) va "6 văn bản duoc dan chieu" (6 muc
+        # dan chieu trong than bai) KHONG phai so tong cua bo du lieu.
         r"(\d+) văn bản",
     ]
     checked = 0
@@ -226,6 +230,13 @@ def main():
         for pat in COUNT_PATTERNS:
             for m in re.finditer(pat, content):
                 n = int(m.group(1))
+                # "N van ban" chi la so VAN BAN CUA BO DU LIEU khi phan sau
+                # khong mo ta mot TAP CON. Vi du "7 van ban ky thuat chi dan"
+                # (7 phan cua GB/Z) va "6 van ban duoc dan chieu" (6 muc dan
+                # chieu trong than bai) KHONG phai so tong cua bo du lieu.
+                tail = content[m.end():m.end() + 40].lower()
+                if any(k in tail for k in ("kỹ thuật", "dẫn chiếu", "từp con", "ky thuat", "dan chieu")):
+                    continue
                 checked += 1
                 if n != len(rows):
                     line_no = content[:m.start()].count("\n") + 1

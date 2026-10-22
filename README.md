@@ -20,7 +20,7 @@ MCP (Anthropic) giải quyết tốt bài toán AI kết nối công cụ. A2A (
 **Kết luận 2: Việt Nam có bốn thế mạnh, nhưng chúng không tồn tại độc lập.**
 Dân số trẻ và làn sóng phát triển AI; thị trường xuất khẩu đa dạng; Tuyên bố Hà Nội về Hợp tác Số và định hướng "Connected Intelligence"; và các cam kết song phương, đa phương về AI. Khi được kết nối bởi một tầng giao thức mở, chúng tạo thành một chỉnh thể có sức mạnh cộng hưởng.
 
-**Kết luốn 3: Chúng tôi đề xuất, không tuyên ngôn.**
+**Kết luận 3: Chúng tôi đề xuất, không tuyên ngôn.**
 Tài liệu này kết thúc bằng **mười hai câu hỏi mở** dành cho cộng đồng và chuyên gia thảo luận, và một **tiêu chí dừng lại**: nếu sau 12 tháng mà đề xuất này không được cộng đồng đón nhận hoặc chứng minh được giá trị thực tiễn, chúng tôi sẽ công khai dừng dự án để không lãng phí nguồn lực xã hội.
 
 ## 3. Trong kho này có gì
